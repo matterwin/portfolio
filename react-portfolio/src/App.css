@@ -1,3 +1,10 @@
 html {
-  background-color: aqua;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #8d8d8d;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
 }
