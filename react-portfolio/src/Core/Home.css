@@ -61,20 +61,10 @@
 
 }
 
-/* .Matthew::before {
-    opacity: 0;
-    animation-duration: 2s;
-} */
-
 .slide{
-    animation-duration: 2s;
+    animation-duration: 500ms;
     animation-name: fadein, slidein;
 }
-
-/* .Erwin {
-    animation-duration: 2s;
-    animation-name: slidein;
-} */
 
 @keyframes slidein {
     from {
