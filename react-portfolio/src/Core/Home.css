@@ -1,5 +1,94 @@
-.box {
-    margin: 0;
+.pic-container > *{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items: center;
+}
+
+.profile-pic {
+    margin-top: 1.2rem;
+    width: 40rem;
+    border-style: none;
+    border-radius: 20px;
+}
+
+.title-name {
+    color: #fff;
+    font-family: 'Catamaran', sans-serif;
+    font-size: 6.5rem;
+    padding-top: 0;
+    margin-top: 0;
+}
+
+.title-me {
+    color: #fff;
+    font-family: 'Catamaran', sans-serif;
+    font-size: 2rem;
+}
+
+.special {
+    margin-top: -7rem;
+    margin-bottom: -2rem;
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items: center;
+}
+
+.block1 {
+    background-color: #fff;
+    width: 160px;
+    height: 10px;
+}
+
+.block {
+    background-color: #fff;
+    width: 160px;
+    height: 20px;
+}
+
+.school {
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items: center;
+}
+
+.tiger {
+    width: 75px;
     padding: 0;
-   
+    margin-right: -10px;
+
+}
+
+/* .Matthew::before {
+    opacity: 0;
+    animation-duration: 2s;
+} */
+
+.slide{
+    animation-duration: 2s;
+    animation-name: fadein, slidein;
+}
+
+/* .Erwin {
+    animation-duration: 2s;
+    animation-name: slidein;
+} */
+
+@keyframes slidein {
+    from {
+      margin-left: -40%;
+      width: 20%;
+    }
+  
+    to {
+      margin-right: 0%;
+      width: 100%;
+    }
+  }
+
+  @keyframes fadein {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }

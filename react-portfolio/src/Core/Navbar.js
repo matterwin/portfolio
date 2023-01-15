@@ -1,6 +1,5 @@
 import React from "react"
 import { NavLink } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
 
 import "./Navbar.css"
 import "./resume.pdf"
@@ -10,7 +9,7 @@ function Navbar() {
     return (  
         <div className="nav-bar">           
             <div className="container">
-                <NavLink end to="/" className="name">Matt Erwin</NavLink>
+                <NavLink end to="/" className="name">MATT ERWIN</NavLink>
                 <NavLink className={({ isActive }) => (isActive ? 'active' : 'inactive')} to="/Portfolio">PORTFOLIO</NavLink>
                 <NavLink className={({ isActive }) => (isActive ? 'active' : 'inactive')} to="/About">ABOUT</NavLink>
                 <NavLink className={({ isActive }) => (isActive ? 'active' : 'inactive')} to="/Contact">CONTACT</NavLink>

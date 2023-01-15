@@ -7,7 +7,7 @@ import "./Resume.css"
 function Resume() {
     return (
         <div className="resume-container">
-            <a href={resume} target="_blank" rel="noreferrer" ><img className="resume-pic" alt="resume" src={resumeSS}></img></a>
+            <a href={resume} target="_blank" rel="noreferrer" className="resume-pic" ><img alt="resume" src={resumeSS}></img></a>
         </div>
     )
 }

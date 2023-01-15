@@ -24,11 +24,11 @@
 
 .resumeActive {
     padding-right: 20rem;
-    color: #815c7c;
+    color: yellow;
 }
 
 .active { 
-    color: #815c7c;
+    color: yellow;
 }
 
 .inactive {
@@ -43,9 +43,6 @@
     margin-right: auto;
     padding-left: 20rem;
     font-size: 2rem;
-    color: #fff;
-}
-.name:hover {
     color: #fff;
 }
 
@@ -72,3 +69,18 @@
     color: #4F284A;
 }
 
+.active:hover {
+    color: yellow;
+}
+
+.resumeActive:hover {
+    color: yellow;
+}
+
+.socials > *:active {
+    color: yellow;
+}
+
+.name:hover {
+    color: #fff;
+}
