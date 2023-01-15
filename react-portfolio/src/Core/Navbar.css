@@ -1,0 +1,22 @@
+.container {
+    padding: 0;
+    margin: -0;
+    margin-right: auto;
+   
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    justify-content: space-around;
+}
+
+.container > *{
+    text-decoration: none;
+    color: white;
+    font-family: 'Days One';
+    font-weight: 5rem;
+    padding: 10px;
+    text-align: center;
+    margin-right: auto;
+    /* font-family: 'Catamaran', sans-serif; */
+}
+
