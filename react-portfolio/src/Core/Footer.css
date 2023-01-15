@@ -1,0 +1,10 @@
+.footer {
+    margin-top: 5rem;
+    display: flex;
+    border: 5px solid #4F284A;
+    background-color: #4F284A;
+    justify-content: center;
+    font-family: 'Catamaran', sans-serif;
+    color: #fff;
+    margin-bottom: 0%;
+}

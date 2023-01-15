@@ -3,11 +3,12 @@ html {
 }
 
 body {
-  background-color: #386D3E;
+  background-color: #815c7c;
   height: 100%;
   width: 100%;
   overflow-x: hidden;
   margin: 0;
+  padding: 0;
 }
 
 .cursor {

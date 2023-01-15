@@ -2,7 +2,12 @@ import React from 'react'
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
 import Home from "./Core/Home"
 import Navbar from "./Core/Navbar"
+import Resume from "./Core/Resume"
 import Hitmarker from "./Core/Hitmarker"
+import About from "./Core/About"
+import Footer from "./Core/Footer"
+import Portfolio from "./Core/Portfolio"
+import Contact from "./Core/Contact"
 
 import "./App.css"
 
@@ -39,7 +44,13 @@ window.addEventListener('click', e => {
         
           <Routes>
             <Route path="/" element={<Home/>}/>
+            <Route path="/Portfolio" element={<Portfolio/>}/>
+            <Route path="/About" element={<About/>}/>
+            <Route path="/About" element={<Contact/>}/>
+            <Route path="/Resume" element={<Resume/>}/>
           </Routes>
+
+          <Footer/>
 
         </Router>
 

@@ -1,13 +1,11 @@
 import React from "react"
 
-import "./Home.css"
-
-function Home() {
+function Contact() {
     return (
-        <div className="box">
+        <div>
             <h1>Hi</h1>
         </div>
     )
 }
 
-export default Home
+export default Contact

@@ -1,22 +1,74 @@
+.nav-bar{
+    position: static;
+}
 .container {
-    padding: 0;
-    margin: -0;
-    margin-right: auto;
-   
+    border: 5px solid #4F284A;
+    background-color: #4F284A;
     display: flex;
-    flex-direction: column;
     text-decoration: none;
-    justify-content: space-around;
 }
 
 .container > *{
     text-decoration: none;
-    color: white;
-    font-family: 'Days One';
+    color: #fff;
+    font-family: 'Days One', sans-serif;
     font-weight: 5rem;
     padding: 10px;
     text-align: center;
-    margin-right: auto;
+    align-self: center;
     /* font-family: 'Catamaran', sans-serif; */
+}
+.container > *:hover{
+    color: #815c7c;
+}
+
+.resumeActive {
+    padding-right: 20rem;
+    color: #815c7c;
+}
+
+.active { 
+    color: #815c7c;
+}
+
+.inactive {
+    color: #fff;
+}
+
+.resumeInactive {
+    padding-right: 20rem;
+}
+
+.name {
+    margin-right: auto;
+    padding-left: 20rem;
+    font-size: 2rem;
+    color: #fff;
+}
+.name:hover {
+    color: #fff;
+}
+
+.socials {
+    display: flex;
+    border: 5px solid #815c7c;
+    background-color: #815c7c;
+    text-decoration: none;
+    justify-content: flex-end;
+    margin-bottom: auto;
+    letter-spacing: 10px;
+    padding-right: 20rem;
+}
+
+.socials > * {
+    cursor: pointer;
+    color: #fff;
+    font-size: 3rem;
+    text-align: center;
+    align-self: center;
+}
+
+.socials > *:hover {
+    color: #4F284A;
 }
 
