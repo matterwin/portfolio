@@ -9,13 +9,19 @@ function Contact() {
     const [name, setName] = useState('');
     const [message, setMessage] = useState(''); 
 
+    const [colorName, setColorName] = useState("white")
+    const [colorMsg, setColorMsg] = useState("white")
+
     const nameStyle = {
-        opacity: flagName
+        opacity: flagName,
+        color: colorName
     }
 
     const msgStyle = {
-        opacity: flagMsg
+        opacity: flagMsg,
+        color: colorMsg
     }
+
 
     useEffect(() => {
         if (name.trim().length === 0){
@@ -41,13 +47,23 @@ function Contact() {
         setName(event.target.value);
     }
 
+    function handleFocusName() {
+        setColorName("yellow")
+        setColorMsg("white")
+    }
+
+    function handleFocusMsg() {
+        setColorMsg("yellow")
+        setColorName("white")
+    }
+
     const handleClick = event => {
         event.preventDefault();
     
-        if (message.trim().length !== 0) {
+        if ((message.trim().length !== 0) && (name.trim().length !== 0)) {
           console.log('input value is NOT empty');
         } else {
-          console.log('input value is empty');
+           alert('input value is empty');
         }
     };
 
@@ -58,7 +74,7 @@ function Contact() {
                     <div>
                         <label style={nameStyle}>NAME</label>
                         <input
-                            onFocus={e => e.currentTarget.select()}
+                            onFocus={handleFocusName}
                             type="text"
                             placeholder="Name"
                             className="name-box"
@@ -69,6 +85,7 @@ function Contact() {
                     <div>
                         <label style={msgStyle}>MESSAGE</label>
                         <textarea
+                            onFocus={handleFocusMsg}
                             type="text"
                             placeholder="Message"
                             className="msg-box"
