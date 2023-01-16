@@ -1,3 +1,64 @@
 .contact-container {
-    
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items: center;
+}
+
+.name-box {
+    text-decoration: none;
+    outline: none;
+    border: none;
+    font-family: 'Days One', sans-serif;
+    width: 600px;
+    font-size: 1.5rem;
+    background-color: transparent;
+    border-left: #3f203b 5px solid;
+    color: #fff;
+    padding-left: 8px;
+}
+
+.msg-box {
+    text-decoration: none;
+    outline: none;
+    border: none;
+    font-family: 'Days One', sans-serif;
+    resize: none;
+    width: 600px;
+    height: 150px;
+    font-size: 1.5rem;
+    background-color: transparent;
+    border-left: #3f203b 5px solid;
+    color: #fff;
+    padding-left: 8px;
+}
+
+.button-box {
+    text-decoration: none;
+    outline: none;
+    border: none;
+    color: #fff;
+    background-color: #3f203b;
+    font-family: 'Days One', sans-serif;
+    cursor: pointer;
+    padding: 25px;
+    margin-right: auto;
+    justify-content: flex-end;
+    font-size: 1rem;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 5px;
+}
+
+.button-box:hover {
+    color: #3f203b;
+    background-color: yellow;
+}
+
+label {
+    display:block;
+    font-family: 'Days One', sans-serif;
+    color: #fff;
+    padding-bottom: 5px;
+    margin-left: auto;
 }

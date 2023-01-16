@@ -2,8 +2,10 @@
     position: static;
 }
 .container {
-    border: 5px solid #4F284A;
-    background-color: #4F284A;
+    /* border: 5px solid #4F284A;
+    background-color: #4F284A; */
+    border: 5px solid #3f203b;
+    background-color: #3f203b;
     display: flex;
     text-decoration: none;
 }
@@ -19,7 +21,7 @@
     /* font-family: 'Catamaran', sans-serif; */
 }
 .container > *:hover{
-    color: #815c7c;
+    color: #674a63;
 }
 
 .resumeActive {
@@ -48,8 +50,10 @@
 
 .socials {
     display: flex;
-    border: 5px solid #815c7c;
-    background-color: #815c7c;
+    /* border: 5px solid #815c7c;
+    background-color: #815c7c; */
+    background-color: #674a63;
+    border: 5px solid #674a63;
     text-decoration: none;
     justify-content: flex-end;
     margin-bottom: auto;
@@ -66,7 +70,7 @@
 }
 
 .socials > *:hover {
-    color: #4F284A;
+    color: #3f203b;
 }
 
 .active:hover {

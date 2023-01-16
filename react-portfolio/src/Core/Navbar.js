@@ -16,10 +16,10 @@ function Navbar() {
                 <NavLink className={({ isActive }) => (isActive ? 'resumeActive' : 'resumeInactive')} to="/Resume" >RESUME</NavLink>
             </div>
             <div className="socials">
-                <a href="https://github.com/matterwin"><i class="fa-brands fa-square-github"></i></a>
-                <a href="https://www.linkedin.com/in/matthew-erwin-71a3971b5"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="https://www.youtube.com/@matthewerwine8333/videos"><i class="fa-brands fa-square-youtube"></i></a>
-                <a href="https://www.instagram.com/m3ttwin/?hl=en"><i class="fa-brands fa-square-instagram"></i></a>
+                <a href="https://github.com/matterwin"><i className="fa-brands fa-square-github"></i></a>
+                <a href="https://www.linkedin.com/in/matthew-erwin-71a3971b5"><i className="fa-brands fa-linkedin"></i></a>
+                <a href="https://www.youtube.com/@matthewerwine8333/videos"><i className="fa-brands fa-square-youtube"></i></a>
+                <a href="https://www.instagram.com/m3ttwin/?hl=en"><i className="fa-brands fa-square-instagram"></i></a>
             </div>
         </div> 
     )

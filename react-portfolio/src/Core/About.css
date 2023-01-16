@@ -1,0 +1,137 @@
+.about {
+    color: #fff;
+    font-family: 'Catamaran', sans-serif;
+    font-size: 6.5rem;
+    padding-top: 0;
+    margin-top: -1rem;
+}
+
+.about-container {
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items: center;
+}
+
+.about-box > *{
+    color: #fff;
+    font-family: 'Catamaran', sans-serif;
+    font-size: 1.15rem;
+}
+
+.about-box {
+    margin-top: 30px;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+.skills-box {
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items: center;
+}
+
+.Skills {
+    color: #fff;
+    font-family: 'Catamaran', sans-serif;
+    font-size: 3.5rem;
+    padding-top: 0;
+    margin-top: 0;
+    padding-bottom: 2rem;
+}
+
+.block1-about {
+    background-color: #fff;
+    width: 80px;
+    height: 8px;
+}
+
+.block-about {
+    background-color: #fff;
+    width: 80px;
+    height: 15px;
+}
+.graph-box {
+    padding-top: 50px;
+}
+
+#my-chart .column {
+    height: 200px;
+    max-width: 600px;
+    margin: 0 auto;
+    --color: #fff;
+}
+ 
+.col-width {
+    width: 20rem;
+}
+
+.label-style {
+    color: #fff;
+    font-family: sans-serif;
+    font-size: 1.4rem;
+}
+
+#animations-example-5 {
+    height: 200px;
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+#animations-example-5 .highlighted {
+    transform-origin: top;
+    animation: revealing-bars 10s linear, highlighted-bar 5s linear infinite; 
+    --color: #3f203b;
+    --size: 1.0;
+    color: #fff;
+    font-family: 'Catamaran', sans-serif;
+}
+
+@keyframes highlighted-bar {
+    0%   { box-shadow: none; }
+    50%  { box-shadow: 0 0 1px 0 black, 0 0 20px 5px darkgrey; }
+    100% { box-shadow: none; }
+}
+
+@keyframes revealing-bars {
+  0%  { transform: scaleY( 0 ); }
+  15% { transform: scaleY( 1 ); }
+}
+
+.Csharp {
+    --color: #fff;
+    --size: 0.6;
+    color: #3f203b;
+    font-family: 'Catamaran', sans-serif;
+    transform-origin: top;
+    animation: revealing-bars 10s linear;
+}
+
+.Python {
+    --color: #fff;
+    --size: 0.4;
+    color: #3f203b;
+    font-family: 'Catamaran', sans-serif;
+    transform-origin: top;
+    animation: revealing-bars 10s linear;
+}
+
+.JS {
+    --color: #fff;
+    --size: 0.85;
+    color: #3f203b;
+    font-family: 'Catamaran', sans-serif;
+    transform-origin: top;
+    animation: revealing-bars 10s linear;
+}
+
+.highlighted {
+    transform-origin: top;
+    animation: revealing-bars 10s linear;
+}
+
+#Java {
+    transform-origin: top;
+    animation: revealing-bars 10s linear;
+}

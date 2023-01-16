@@ -15,7 +15,6 @@ function Home() {
                 <div className="special">
                     <h1 className="block1">&nbsp;</h1>
                     <h1 className="block">&nbsp;</h1>
-                    {/* <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1> */}
                     <h1 className="block1">&nbsp;</h1>
                 </div>
                 <div className="school">

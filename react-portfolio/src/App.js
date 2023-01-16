@@ -46,7 +46,7 @@ window.addEventListener('click', e => {
             <Route path="/" element={<Home/>}/>
             <Route path="/Portfolio" element={<Portfolio/>}/>
             <Route path="/About" element={<About/>}/>
-            <Route path="/About" element={<Contact/>}/>
+            <Route path="/Contact" element={<Contact/>}/>
             <Route path="/Resume" element={<Resume/>}/>
           </Routes>
 
