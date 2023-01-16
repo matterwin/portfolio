@@ -67,10 +67,12 @@ function Contact() {
         }
     };
 
+    //have placeholder animation slide down and have label slide from top and add a delay to make it smooth.
+
     return (
         <div>
             <div className="contact-container">
-                <form>
+                <form action="https://formsubmit.co/baseborns@gmail.com" method="POST">
                     <div>
                         <label style={nameStyle}>NAME</label>
                         <input
@@ -79,6 +81,7 @@ function Contact() {
                             placeholder="Name"
                             className="name-box"
                             onChange={handleChangeName}
+                            name="name"
                         />
                     </div>
                     <div><p></p></div>
@@ -90,14 +93,16 @@ function Contact() {
                             placeholder="Message"
                             className="msg-box"
                             onChange={handleChangeMsg}
+                            name="message"
                         />
                     </div> 
                     <div><p></p></div>
                     <div>
-                        <button onClick={handleClick} className="button-box">SEND</button>
+                        <button onClick={handleClick} className="button-box" type="submit" >SEND</button>
                     </div>                
                 </form>
             </div>
+            <div className="added-space"></div>
         </div>
     )
 }
