@@ -13,6 +13,8 @@ import "./App.css"
 
 function App() {
 
+  //maybe do a weather rain that shows the weather of my location
+
   const createCursor = (x,y) => {
     const cursor = document.createElement('div');
     cursor.className = 'cursor';

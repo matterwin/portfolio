@@ -3,6 +3,9 @@
     flex-direction:column;
     justify-content:center;
     align-items: center;
+    /* margin-top: 30px;
+    margin-left: 25%;
+    margin-right: 25%; */
 }
 
 .name-box {
@@ -11,6 +14,7 @@
     border: none;
     font-family: 'Days One', sans-serif;
     width: 600px;
+    /* height: 50px; */
     font-size: 1.5rem;
     background-color: transparent;
     border-left: #3f203b 5px solid;
@@ -25,7 +29,7 @@
     font-family: 'Days One', sans-serif;
     resize: none;
     width: 600px;
-    height: 150px;
+    height: 200px;
     font-size: 1.5rem;
     background-color: transparent;
     border-left: #3f203b 5px solid;
@@ -33,7 +37,7 @@
     padding-left: 8px;
 }
 
-.button-box {
+.validInput {
     text-decoration: none;
     outline: none;
     border: none;
@@ -48,9 +52,10 @@
     padding-left: 20px;
     padding-right: 20px;
     border-radius: 5px;
+    animation: none;
 }
 
-.button-box:hover {
+.validInput:hover {
     color: #3f203b;
     background-color: yellow;
 }
@@ -65,4 +70,79 @@ label {
 
 .added-space {
     padding-bottom: 350px;
+}
+
+.inputIsThere {
+    animation: slide-down 100ms forwards;
+  }
+
+  @keyframes slide-down {
+    0% {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+}
+
+.inputIsNotThere {
+    animation: slide-up .65s forwards;
+  }
+  
+  @keyframes slide-up {
+    0% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+  }
+
+.noAni {
+    animation: none;
+}
+
+.inputInvalid {
+    text-decoration: none;
+    outline: none;
+    border: none;
+    color: #fff;
+    background-color: #ff4343;
+    font-family: 'Days One', sans-serif;
+    cursor: pointer;
+    padding: 25px;
+    margin-right: auto;
+    justify-content: flex-end;
+    font-size: 1rem;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 5px;
+    cursor: not-allowed;
+    animation: vibrate 0.2s ease-in-out infinite;
+  }
+  
+  @keyframes vibrate {
+    0% {
+      transform: translateX(0);
+    }
+    25% {
+      transform: translateX(-5px);
+    }
+    50% {
+      transform: translateX(5px);
+    }
+    75% {
+      transform: translateX(-5px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+.all-contact-container {
+    padding-top: 60px;
 }

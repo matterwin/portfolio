@@ -4,77 +4,125 @@ import "./Contact.css"
 
 function Contact() {
     
-    const [flagName, setFlagName] = useState(0)
-    const [flagMsg, setFlagMsg] = useState(0)
+    const [flagName, setFlagName] = useState(100);
+    const [flagMsg, setFlagMsg] = useState(0);
     const [name, setName] = useState('');
     const [message, setMessage] = useState(''); 
 
-    const [colorName, setColorName] = useState("white")
-    const [colorMsg, setColorMsg] = useState("white")
+    const [colorName, setColorName] = useState("white");
+    const [colorMsg, setColorMsg] = useState("white");
+
+    const [nameAnimation, setNameAnimation] = useState("noAni");
+    const [msgAnimation, setMsgAnimation] = useState("noAni");
+
+    const [buttonClass, setButtonClass] = useState("validInput")
+
+    var flag = 0;
 
     const nameStyle = {
         opacity: flagName,
         color: colorName
-    }
+    };
 
     const msgStyle = {
         opacity: flagMsg,
         color: colorMsg
-    }
-
+    };
 
     useEffect(() => {
         if (name.trim().length === 0){
             setFlagName(0);
+            setNameAnimation("inputIsNotThere");
         }
-        else
+        else {
             setFlagName(100);
+            setNameAnimation("inputIsThere");
+        }
     }, [name])
 
     useEffect(() => {
         if (message.trim().length === 0){
             setFlagMsg(0);
+            setMsgAnimation("inputIsNotThere");
         }
-        else
+        else {
             setFlagMsg(100);
+            setMsgAnimation("inputIsThere");
+        }
     }, [message])
 
-    const handleChangeMsg = event => {
-        setMessage(event.target.value);
-    }
+    useEffect(() => {
+        if(flag === 0) {
+            setNameAnimation("noAni");
+            setMsgAnimation("noAni");
+        }
+    }, [])
 
     const handleChangeName = event => {
         setName(event.target.value);
-    }
+        flag = 1;
+    };
+
+    const handleChangeMsg = event => {
+        setMessage(event.target.value);
+        flag = 1;
+    };
 
     function handleFocusName() {
-        setColorName("yellow")
-        setColorMsg("white")
-    }
+        setColorName("yellow");
+        setColorMsg("white");
+    };
 
     function handleFocusMsg() {
-        setColorMsg("yellow")
-        setColorName("white")
-    }
+        setColorMsg("yellow");
+        setColorName("white");
+    };
 
     const handleClick = event => {
         event.preventDefault();
     
         if ((message.trim().length !== 0) && (name.trim().length !== 0)) {
-          console.log('input value is NOT empty');
-        } else {
-           alert('input value is empty');
-        }
-    };
+            fetch("https://formsubmit.co/ajax/baseborns@gmail.com", {
+                method: "POST",
+                headers: { 
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify({
+                    name: JSON.stringify(name),
+                    message: JSON.stringify(message)
+                })
+            })
+            .then(response => response.json())
+            .then(data => console.log(data))
+            .catch(error => console.log(error));
 
-    //have placeholder animation slide down and have label slide from top and add a delay to make it smooth.
+        } else { 
+
+            const intervalId = setInterval(() => {
+                setButtonClass("inputInvalid");
+            }, 0);
+
+            setTimeout(() => {
+                clearInterval(intervalId);
+                setButtonClass("validInput");
+            }, 500);
+
+        }
+    }
 
     return (
         <div>
             <div className="contact-container">
+            <h1 className="about">Contact me</h1>
+            <div className="special">
+                    <h1 className="block1">&nbsp;</h1>
+                    <h1 className="block">&nbsp;</h1>
+                    <h1 className="block1">&nbsp;</h1>
+            </div>
                 <form action="https://formsubmit.co/baseborns@gmail.com" method="POST">
-                    <div>
-                        <label style={nameStyle}>NAME</label>
+                    <div className="all-contact-container">
+                        <label style={nameStyle} className={nameAnimation}>NAME</label>
                         <input
                             onFocus={handleFocusName}
                             type="text"
@@ -86,7 +134,7 @@ function Contact() {
                     </div>
                     <div><p></p></div>
                     <div>
-                        <label style={msgStyle}>MESSAGE</label>
+                        <label style={msgStyle} className={msgAnimation}>MESSAGE</label>
                         <textarea
                             onFocus={handleFocusMsg}
                             type="text"
@@ -98,7 +146,7 @@ function Contact() {
                     </div> 
                     <div><p></p></div>
                     <div>
-                        <button onClick={handleClick} className="button-box" type="submit" >SEND</button>
+                        <button onClick={handleClick} className={buttonClass} type="submit" >SEND</button>
                     </div>                
                 </form>
             </div>
