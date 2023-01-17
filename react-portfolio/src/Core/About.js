@@ -15,7 +15,7 @@ function About() {
                     <h1 className="block1">&nbsp;</h1>
             </div>
             <div className="about-box">
-                <p>Hello, my name is Matthew Erwin, or you can call me just Matt.
+                <p>Hello, my name is <u>Matthew Erwin</u>, or you can call me just Matt.
                     I am a Junior at Louisiana State University, studying and minoring in Computer Science and Mathematics, respectively.
                 </p>
                 <p>
@@ -23,7 +23,7 @@ function About() {
                 </p>
 
                 <p>
-                Now, as a student at university, I have a lot more experience in Java and now more so C++. My preferred job positions regarding software development are either Fullstack, Backend, or another generic software developer role.
+                Now, as a student at university, I have a lot more experience in Java and now more so C++. My preferred job positions regarding software development are either <u>Fullstack</u>, <u>Backend</u>, or another <u>similar</u> software developer role.
                 </p>
                 <p>&nbsp;</p>
                 <p>
