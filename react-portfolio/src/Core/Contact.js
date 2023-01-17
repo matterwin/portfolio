@@ -23,6 +23,8 @@ function Contact() {
 
     const [buttonText, setButtonText] = useState("SEND")
 
+    const [disabled, setDisabled] = useState("")
+
     var flag = 0;
 
     const nameStyle = {
@@ -106,12 +108,14 @@ function Contact() {
             const intervalIdSuc = setInterval(() => {
                 setButtonText("SENT");
                 setButtonClass("successButton");
+                setDisabled("true");
             }, 0);
 
             setTimeout(() => {
                 clearInterval(intervalIdSuc);
                 setButtonText("SEND");
                 setButtonClass("validInput");
+                setDisabled("");
             }, 4000);
 
             setMessage("");
@@ -172,7 +176,7 @@ function Contact() {
                         </div> 
                         <div><p></p></div>
                         <div>
-                            <button onClick={handleClick} className={buttonClass} type="submit" >{buttonText}</button>
+                            <button onClick={handleClick} className={buttonClass} type="submit" disabled={disabled}>{buttonText}</button>
                         </div>                
                     </form>
             </div>
