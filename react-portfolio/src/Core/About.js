@@ -16,7 +16,7 @@ function About() {
             </div>
             <div className="about-box">
                 <p>Hello, my name is <u>Matthew Erwin</u>, or you can call me just Matt.
-                    I am a Junior at Louisiana State University, studying and minoring in Computer Science and Mathematics, respectively.
+                    I am a Junior at Louisiana State University, studying and minoring in <b>Computer Science</b> and <b>Mathematics</b>, respectively.
                 </p>
                 <p>
                     I started my CS journey around Junior year in high school. I started with the infamous Scratch language to learn how software engineering works. Later in my senior year of high school, I studied my first programming language, Java.
@@ -27,7 +27,7 @@ function About() {
                 </p>
                 <p>&nbsp;</p>
                 <p>
-                On a more personal level, my passion is content creation, sports, cars, and video games. What I mean by content creation is making videos. On my YouTube, I edit and post a few travel videos. I also plan on making some software engineering videos.
+                On a more personal level, my passion is <b>content creation, sports, cars,</b> and <b>video games</b>. What I mean by content creation is making videos. On my YouTube, I edit and post a few travel videos. I also plan on making some software engineering videos.
                 </p>
             </div>
             <div className="skills-box">
