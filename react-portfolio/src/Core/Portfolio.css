@@ -32,6 +32,8 @@
     background-size: cover;
     background-position: center;
     cursor: pointer;
+    color: #fff;
+    font-family: 'Catamaran', sans-serif;
 }
 
 .Fithappens:hover, .WordJustWord:hover, .Portfolio:hover {
@@ -45,7 +47,8 @@
     background-size: cover;
     background-position: center;
     cursor: pointer;
-    background-color: rgb(153, 153, 153);
+    color: #fff;
+    font-family: 'Catamaran', sans-serif;
 }
 
 .Portfolio {
@@ -55,4 +58,20 @@
     background-size: cover;
     background-position: center;
     cursor: pointer;
+    color: #fff;
+    font-family: 'Catamaran', sans-serif;
+}
+
+.fit-button {
+    color: #3f203b;
+    font-family: 'Catamaran', sans-serif;
+    cursor: pointer;
+    background-color: #fff;
+    border: none;
+    outline: none;
+    font-weight: bold;
+}
+
+.fit-button:hover {
+    background-color: rgb(139, 139, 139);
 }
