@@ -3,7 +3,56 @@
     flex-direction:column;
     justify-content:center;
     align-items: center;
-    margin-top: 30px;
+/* margin-top: 30px;
     margin-left: 25%;
-    margin-right: 25%;
+    margin-right: 25%; */
+}
+
+.port-container-grid {
+    margin-top: 80px;
+    display: grid;
+    grid-template-columns: 350px 350px 350px;
+    grid-template-rows: 250px 250px;
+    grid-gap: 35px;
+}
+
+.port-container-grid > div {
+    box-sizing: border-box;
+    background-color: rgb(153, 153, 153);
+    height: 100%;
+    padding: 10px;
+    margin: 0px;
+    transition: transform 0.3s ease;
+}
+
+.Fithappens {
+    background-image: url(
+        "../pictures/fithappens.JPG"
+    );
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+}
+
+.Fithappens:hover, .WordJustWord:hover, .Portfolio:hover {
+    transform: translateY(-10px);
+}
+
+.WordJustWord {
+    background-image: url(
+        "../pictures/w.png"
+    );
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    background-color: rgb(153, 153, 153);
+}
+
+.Portfolio {
+    background-image: url(
+        "../pictures/port.JPG"
+    );
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
 }
