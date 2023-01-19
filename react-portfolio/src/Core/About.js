@@ -31,7 +31,7 @@ function About() {
                 </p>
             </div>
             <div className="skills-box">
-                <h3 className="Skills">Skills</h3>
+                <h3 className="Skills">Overalls</h3>
                 <div className="special">
                     <h1 className="block1-about">&nbsp;</h1>
                     <h1 className="block-about">&nbsp;</h1>
@@ -44,23 +44,23 @@ function About() {
                             <tbody>
                                 <tr className="col-width">
                                     <th scope="col" className="label-style"> C# </th>
-                                    <td className="Csharp">&nbsp;0.6</td>
+                                    <td className="Csharp">&nbsp;75</td>
                                 </tr>
                                 <tr>
                                     <th scope="col" className="label-style"> Java </th>
-                                    <td className="highlighted" id="Java">&nbsp;1</td>
+                                    <td className="highlighted" id="Java">&nbsp;99</td>
                                 </tr>
                                 <tr>
                                     <th scope="col" className="label-style"> JS </th>
-                                    <td className="JS">&nbsp;0.85</td>
+                                    <td className="JS">&nbsp;85</td>
                                 </tr>
                                 <tr>
                                     <th scope="col" className="label-style"> Python </th>
-                                    <td className="Python">&nbsp;0.4</td>
+                                    <td className="Python">&nbsp;65</td>
                                 </tr>
                                 <tr>
                                     <th scope="col" className="label-style"> C++ </th>
-                                    <td className="highlighted">&nbsp;1</td>
+                                    <td className="highlighted">&nbsp;99</td>
                                 </tr>
                             </tbody>                
                         </table>

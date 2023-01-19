@@ -15,9 +15,11 @@
 .title-name {
     color: #fff;
     font-family: 'Catamaran', sans-serif;
-    font-size: 6.5rem;
+    font-size: 6.5em;
     padding-top: 0;
     margin-top: 0;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .title-me {
@@ -81,4 +83,26 @@
   @keyframes fadein {
     from { opacity: 0; }
     to { opacity: 1; }
+}
+
+@media (max-width: 1000px) {
+    .profile-pic{
+        width: 60%
+    }
+
+    .title-name{
+        font-size: 4rem;
+    }
+
+    .block, .block1 {
+        width: 6rem;
+    }
+
+    .title-me {
+        font-size: 1.3rem;
+    }
+
+    .special {
+        margin-top: -5rem;
+    }
 }

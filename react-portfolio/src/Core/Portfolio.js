@@ -115,7 +115,7 @@ function Portfolio() {
                     </div>
                 </div>
                 <div className="Portfolio" onClick={handleClickPort} onMouseLeave={closePopPort} style={popupPort}>
-                    <div style={portText}>
+                    <div style={portText} >
                         <p>Well, you're on my site right now. The SS says "portfolio," but I just didn't have a better SS to put up here. Any questions, just contact me.</p>
                         <p>Tools: React, CSS</p>
                         <a href='https://github.com/matterwin/portfolio'><button  className='fit-button'>Github</button></a>
