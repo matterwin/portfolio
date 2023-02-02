@@ -87,11 +87,12 @@
 
 @media (max-width: 1000px) {
     .profile-pic{
-        width: 60%
+        width: 75%
     }
 
     .title-name{
         font-size: 4rem;
+        font-size: 300%;
     }
 
     .block, .block1 {
@@ -100,9 +101,16 @@
 
     .title-me {
         font-size: 1.3rem;
+        font-size: 110%;
     }
 
     .special {
-        margin-top: -5rem;
+        margin-top: -4rem;
     }
 }
+
+/* @media (max-width: 660px) {
+    .more-space {
+        padding-top: 90px;
+    }
+} */

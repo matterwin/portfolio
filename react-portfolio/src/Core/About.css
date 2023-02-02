@@ -136,3 +136,20 @@
     transform-origin: top;
     animation: revealing-bars 10s linear;
 }
+
+@media (max-width: 1000px) {
+    .about {
+        font-size: 4rem;
+        font-size: 300%;
+    }
+
+    .block, .block1 {
+        width: 6rem;
+    }
+
+    .about-box {
+        margin-left: 40px;
+        margin-right: 40px;
+        padding-bottom: 80px;
+    }
+}

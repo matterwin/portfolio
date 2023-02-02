@@ -6,5 +6,7 @@
     justify-content: center;
     font-family: 'Catamaran', sans-serif;
     color: #fff;
-    margin-bottom: 0%;
+    position:relative;
+    bottom: 0;
+    margin-top: 200px;
 }

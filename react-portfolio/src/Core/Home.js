@@ -25,6 +25,7 @@ function Home() {
                     </h3>
                 </div>
             </div>
+            <div className="more-space">&nbsp;</div>
         </div>
     )
 }

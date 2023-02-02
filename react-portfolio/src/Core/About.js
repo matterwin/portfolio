@@ -30,7 +30,7 @@ function About() {
                 On a more personal level, my passion is <b>content creation, sports, cars,</b> and <b>video games</b>. What I mean by content creation is making videos. On my YouTube, I edit and post a few travel videos. I also plan on making some software engineering videos.
                 </p>
             </div>
-            <div className="skills-box">
+            {/* <div className="skills-box">
                 <h3 className="Skills">Overalls</h3>
                 <div className="special">
                     <h1 className="block1-about">&nbsp;</h1>
@@ -67,7 +67,7 @@ function About() {
                     </div>
                     <p></p>
                 </div>
-            </div>
+            </div> */}
         </div>
     )
 }

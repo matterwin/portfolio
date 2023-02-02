@@ -2,14 +2,15 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
+html, body {
   /* background-color: #815c7c; */
   background-color: #674a63;
-  height: 100%;
+  /* height: 100%; */
   width: 100%;
   overflow-x: hidden;
   margin: 0;
   padding: 0;
+  margin-bottom: 0;
 }
 
 .cursor {

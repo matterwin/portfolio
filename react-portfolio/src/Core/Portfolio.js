@@ -121,8 +121,9 @@ function Portfolio() {
                         <a href='https://github.com/matterwin/portfolio'><button  className='fit-button'>Github</button></a>
                     </div>
                 </div>
-
+                
             </div>
+            <div className="space"></div>
         </div>
             
     )

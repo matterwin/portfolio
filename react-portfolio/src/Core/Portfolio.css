@@ -75,3 +75,18 @@
 .fit-button:hover {
     background-color: rgb(139, 139, 139);
 }
+
+@media (max-width: 1145px) { 
+    .port-container-grid {
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+    }
+
+    .space {
+        margin-bottom: 80px;
+    }
+
+    .port-container-grid > div {
+        width: 350px;
+    } 
+}

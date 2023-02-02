@@ -182,3 +182,7 @@ label {
       transform: translateY(0);
     }
   }
+
+  @media (max-width: 1145px) { 
+    
+  }
