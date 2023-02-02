@@ -11,7 +11,7 @@ function Home() {
                 <img className="profile-pic" alt="Matthew Erwin" src={selfie}></img>
             </div>
             <div className="title">
-                <h1 className="title-name"><span className="slide">Matthew</span> <span className="slide">Erwin</span></h1>
+                <h1 className="title-name"><span className="slide">Matthew</span> &nbsp;<span className="slide">Erwin</span></h1>
                 <div className="special">
                     <h1 className="block1">&nbsp;</h1>
                     <h1 className="block">&nbsp;</h1>

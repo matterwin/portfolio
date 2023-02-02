@@ -183,6 +183,9 @@ label {
     }
   }
 
-  @media (max-width: 1145px) { 
-    
+  @media (max-width: 640px) { 
+    .name-box, .msg-box {
+      width: 330px;
+      width: 95%;
+    }
   }
