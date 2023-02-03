@@ -125,6 +125,20 @@
     transform: translateY(-10px) rotate(-585deg);
   }
 
+  .showSubNav {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background-color: #3f203b;
+    right: 0;
+    left: 0;
+    text-align: left;
+    padding: 16px 0;
+    margin-top: 15.5rem;
+    padding-left: 20px;
+    padding-right: 30px;
+  }
+
 @media (max-width: 1360px) {
     .menu-icon {
         display: flex;
@@ -145,6 +159,10 @@
     .name {
         padding-left: 1rem;
     }
+
+    .showSubNav {
+        display: visible;
+    }
 }
 
 @media (min-width: 1361px) {
@@ -159,4 +177,57 @@
     .socials {
         visibility: visible;
     }
+
+    .showSubNav {
+        display: none;
+    }
 }
+
+.showSubNav {
+    display: visible;
+}
+  
+.hideSubNav {
+    display: none;
+}
+
+.activeSub:hover {
+    color: yellow;
+}
+
+.resumeActiveSub:hover {
+    color: yellow;
+}
+
+.activeSub {
+    text-decoration: none;
+    color: yellow;
+}
+
+.inactiveSub {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem
+}
+
+.resumeActiveSub {
+    text-decoration: none;
+    color: yellow;
+}
+
+.resumeInactiveSub {
+    text-decoration: none;
+    color: #fff;
+}
+
+.inactiveSub:hover {
+    color: #674a63;
+}
+
+.resumeInactiveSub:hover {
+    color: #674a63;
+}
+
+.activeSub, .inactiveSub, .resumeActiveSub, .resumeInactiveSub {
+    padding: 0.5rem;
+  }

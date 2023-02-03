@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { NavLink } from "react-router-dom";
 
 import "./Navbar.css"
@@ -8,9 +8,17 @@ function Navbar() {
 
     const [isOpen, setIsOpen] = useState(false);
 
+    const handleScroll = () => {
+        console.log("scrolled from click");
+        //document.removeEventListener('scroll', handleScroll);
+    }
+
     const handleClick = () => {
+        console.log("init");
+        document.addEventListener('scroll', handleScroll);
         setIsOpen(!isOpen);
     }
+
 
     return (  
         <div className="nav-bar">           
@@ -22,17 +30,19 @@ function Navbar() {
                 <NavLink className={({ isActive }) => (isActive ? 'resumeActive' : 'resumeInactive')} to="/Resume" >RESUME</NavLink>
         
                 <div className="menu-container">
-                    <div className={`menu-icon ${isOpen ? 'menu-icon--open' : ''}`} onClick={handleClick}>
+                    <div className={`menu-icon ${isOpen ? 'menu-icon--open' : ''}`} onClick={handleClick} onMouseLeave={() => {
+                    document.addEventListener("click", setIsOpen(false))}}>
                         <div className="menu-icon__line"></div>
                         <div className="menu-icon__line"></div>
                         <div className="menu-icon__line"></div>
-                    </div>
-                    {/* <NavLink className={({ isActive }) => (isActive ? 'active' : 'inactive')} to="/Portfolio">PORTFOLIO</NavLink>
-                    <NavLink className={({ isActive }) => (isActive ? 'active' : 'inactive')} to="/About">ABOUT</NavLink>
-                    <NavLink className={({ isActive }) => (isActive ? 'active' : 'inactive')} to="/Contact">CONTACT</NavLink>
-                    <NavLink className={({ isActive }) => (isActive ? 'resumeActive' : 'resumeInactive')} to="/Resume" >RESUME</NavLink> */}
+                    </div>                     
                 </div>
-                
+                <div className={`${isOpen ? 'showSubNav' : 'hideSubNav'}`}>
+                        <NavLink className={({ isActive }) => (isActive ? 'activeSub' : 'inactiveSub')} to="/Portfolio" >PORTFOLIO</NavLink>
+                        <NavLink className={({ isActive }) => (isActive ? 'activeSub' : 'inactiveSub')} to="/About" >ABOUT</NavLink>
+                        <NavLink className={({ isActive }) => (isActive ? 'activeSub' : 'inactiveSub')} to="/Contact" >CONTACT</NavLink>
+                        <NavLink className={({ isActive }) => (isActive ? 'resumeActiveSub' : 'resumeInactiveSub')} to="/Resume" >RESUME</NavLink>
+                </div>         
             </div>
             
             <div className="socials">
