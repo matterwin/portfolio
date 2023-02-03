@@ -140,7 +140,7 @@ function Contact() {
     }
 
     return (
-        <div>
+        <div className="fornav">
             <div className="contact-container">
                 <h1 className="about">Contact me</h1>
                 <div className="special">

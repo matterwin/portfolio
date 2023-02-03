@@ -20,11 +20,16 @@ function Navbar() {
         setIsOpen(false);
     }
 
+    function hideMenu() {
+        document.removeEventListener("click", hideMenu);
+        setIsOpen(false);
+    }
+
     return (  
         <div className="nav-bar"> 
 
             
-
+            
             <div className="container">
                 <NavLink end to="/" className="name" onClick={handleSubClick}>MATT ERWIN</NavLink>
                 <NavLink className={({ isActive }) => (isActive ? 'active' : 'inactive')} to="/Portfolio" >PORTFOLIO</NavLink>
@@ -33,7 +38,8 @@ function Navbar() {
                 <NavLink className={({ isActive }) => (isActive ? 'resumeActive' : 'resumeInactive')} to="/Resume" >RESUME</NavLink>
         
                 <div className="menu-container">
-                    <div className={`menu-icon ${isOpen ? 'menu-icon--open' : ''}`} onClick={handleClick} >
+                    <div className={`menu-icon ${isOpen ? 'menu-icon--open' : ''}`} onClick={handleClick} onMouseLeave={() => {
+            document.addEventListener("click", hideMenu)}}>
                         <div className="menu-icon__line"></div>
                         <div className="menu-icon__line"></div>
                         <div className="menu-icon__line"></div>
@@ -61,11 +67,7 @@ function Navbar() {
                 <a href="https://www.youtube.com/@matthewerwine8333/videos"><i className="fa-brands fa-square-youtube"></i></a>
                 <a href="https://www.instagram.com/m3ttwin/?hl=en"><i className="fa-brands fa-square-instagram"></i></a>
             </div>
-
-            <div className='dd'>&nbsp;</div>
-        </div> 
-
-        
+        </div>  
     )
 }
 
