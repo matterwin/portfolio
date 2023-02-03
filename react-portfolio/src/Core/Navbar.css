@@ -172,10 +172,11 @@
         margin-left: 0%;
     }
 
-    /* .nav-bar {
+    .nav-bar {
         position: fixed;
         width: 100%;
-    } */
+        top: 0;
+    }
 
     .active, .inactive, .resumeActive, .resumeInactive {
         display: none;

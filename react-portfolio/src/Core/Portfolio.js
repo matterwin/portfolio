@@ -11,15 +11,21 @@ function Portfolio() {
     const [popupPort, setPopupPort] = useState({})
 
     const [fitText, setFitText] = useState({
-        opacity: '0'
+        opacity: '0',
+        color: 'transparent',
+        visibility: 'hidden'
     })
 
     const [wordText, setWordText] = useState({
-        opacity: '0'
+        opacity: '0',
+        color: 'transparent',
+        visibility: 'hidden'
     })
 
     const [portText, setPortText] = useState({
-        opacity: '0'
+        opacity: '0',
+        color: 'transparent',
+        visibility: 'hidden'
     })
 
     function handleClick() {

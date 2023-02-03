@@ -22,6 +22,9 @@ function Navbar() {
 
     return (  
         <div className="nav-bar"> 
+
+            
+
             <div className="container">
                 <NavLink end to="/" className="name" onClick={handleSubClick}>MATT ERWIN</NavLink>
                 <NavLink className={({ isActive }) => (isActive ? 'active' : 'inactive')} to="/Portfolio" >PORTFOLIO</NavLink>
@@ -58,6 +61,8 @@ function Navbar() {
                 <a href="https://www.youtube.com/@matthewerwine8333/videos"><i className="fa-brands fa-square-youtube"></i></a>
                 <a href="https://www.instagram.com/m3ttwin/?hl=en"><i className="fa-brands fa-square-instagram"></i></a>
             </div>
+
+            <div className='dd'>&nbsp;</div>
         </div> 
 
         
