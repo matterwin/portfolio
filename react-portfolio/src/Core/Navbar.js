@@ -7,23 +7,9 @@ import "./resume.pdf"
 function Navbar() {
 
     const [isOpen, setIsOpen] = useState(false);
-    const [scroll, setScroll] = useState(false);
-
-    useEffect(() => {
-        document.addEventListener('scroll', handleScroll);
-        window.addEventListener('scroll',function() {
-            console.log("SCROLLLL");
-        });
-    },[])
-
-    useEffect(() => {
-        console.log("changed");
-        // handleScroll();
-    },[isOpen])
 
     const handleScroll = () => {
-        console.log("scrolled from click");
-        //document.removeEventListener('scroll', handleScroll);
+        setIsOpen(false);
     }
 
     const handleClick = () => {
@@ -33,11 +19,6 @@ function Navbar() {
     const handleSubClick = () => {
         setIsOpen(false);
     }
-
-    window.addEventListener('scroll',function() {
-        console.log("SCROLLLL");
-    });
-
 
     return (  
         <div className="nav-bar"> 
@@ -58,7 +39,7 @@ function Navbar() {
                          
             </div>
 
-            <div className={`${isOpen ? 'showSubNav' : 'hideSubNav'}`}>
+            <div className={`${isOpen ? 'showSubNav' : 'hideSubNav'}`} onScroll={handleScroll}>
                         <NavLink className={({ isActive }) => (isActive ? 'activeSub' : 'inactiveSub')} to="/Portfolio" onClick={handleSubClick}>PORTFOLIO</NavLink>
                         <NavLink className={({ isActive }) => (isActive ? 'activeSub' : 'inactiveSub')} to="/About" onClick={handleSubClick}>ABOUT</NavLink>
                         <NavLink className={({ isActive }) => (isActive ? 'activeSub' : 'inactiveSub')} to="/Contact" onClick={handleSubClick}>CONTACT</NavLink>
@@ -78,6 +59,8 @@ function Navbar() {
                 <a href="https://www.instagram.com/m3ttwin/?hl=en"><i className="fa-brands fa-square-instagram"></i></a>
             </div>
         </div> 
+
+        
     )
 }
 

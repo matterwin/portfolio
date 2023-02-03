@@ -1,5 +1,6 @@
 .nav-bar{
     position: static;
+    z-index: 999;
 }
 .container {
     /* border: 5px solid #4F284A;
@@ -103,6 +104,7 @@
     border-radius: 3px;
     padding: 10px;
     display: none;
+    z-index: 999;
   }
   
   .menu-icon__line {
@@ -169,6 +171,11 @@
         margin-right: 0rem;
         margin-left: 0%;
     }
+
+    /* .nav-bar {
+        position: fixed;
+        width: 100%;
+    } */
 
     .active, .inactive, .resumeActive, .resumeInactive {
         display: none;
@@ -263,4 +270,11 @@
     .activeSub, .inactiveSub, .resumeActiveSub, .resumeInactiveSub {
         font-size: 1rem
     }
+}
+
+.showSubNav {
+    border: 1px #674a63 solid;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0;
 }

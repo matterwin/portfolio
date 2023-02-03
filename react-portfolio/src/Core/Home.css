@@ -110,6 +110,9 @@
         font-size: 110%;
     }
 
+    .pic-container {
+        padding-top: 10%;
+    }
     
 }
 
@@ -123,3 +126,4 @@
         font-size: 90%;
     }
 }
+
