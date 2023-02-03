@@ -7,6 +7,19 @@ import "./resume.pdf"
 function Navbar() {
 
     const [isOpen, setIsOpen] = useState(false);
+    const [scroll, setScroll] = useState(false);
+
+    useEffect(() => {
+        document.addEventListener('scroll', handleScroll);
+        window.addEventListener('scroll',function() {
+            console.log("SCROLLLL");
+        });
+    },[])
+
+    useEffect(() => {
+        console.log("changed");
+        // handleScroll();
+    },[isOpen])
 
     const handleScroll = () => {
         console.log("scrolled from click");
@@ -14,36 +27,49 @@ function Navbar() {
     }
 
     const handleClick = () => {
-        console.log("init");
-        document.addEventListener('scroll', handleScroll);
         setIsOpen(!isOpen);
     }
 
+    const handleSubClick = () => {
+        setIsOpen(false);
+    }
+
+    window.addEventListener('scroll',function() {
+        console.log("SCROLLLL");
+    });
+
 
     return (  
-        <div className="nav-bar">           
+        <div className="nav-bar"> 
             <div className="container">
-                <NavLink end to="/" className="name">MATT ERWIN</NavLink>
+                <NavLink end to="/" className="name" onClick={handleSubClick}>MATT ERWIN</NavLink>
                 <NavLink className={({ isActive }) => (isActive ? 'active' : 'inactive')} to="/Portfolio" >PORTFOLIO</NavLink>
                 <NavLink className={({ isActive }) => (isActive ? 'active' : 'inactive')} to="/About" >ABOUT</NavLink>
                 <NavLink className={({ isActive }) => (isActive ? 'active' : 'inactive')} to="/Contact" >CONTACT</NavLink>
                 <NavLink className={({ isActive }) => (isActive ? 'resumeActive' : 'resumeInactive')} to="/Resume" >RESUME</NavLink>
         
                 <div className="menu-container">
-                    <div className={`menu-icon ${isOpen ? 'menu-icon--open' : ''}`} onClick={handleClick} onMouseLeave={() => {
-                    document.addEventListener("click", setIsOpen(false))}}>
+                    <div className={`menu-icon ${isOpen ? 'menu-icon--open' : ''}`} onClick={handleClick} >
                         <div className="menu-icon__line"></div>
                         <div className="menu-icon__line"></div>
                         <div className="menu-icon__line"></div>
                     </div>                     
                 </div>
-                <div className={`${isOpen ? 'showSubNav' : 'hideSubNav'}`}>
-                        <NavLink className={({ isActive }) => (isActive ? 'activeSub' : 'inactiveSub')} to="/Portfolio" >PORTFOLIO</NavLink>
-                        <NavLink className={({ isActive }) => (isActive ? 'activeSub' : 'inactiveSub')} to="/About" >ABOUT</NavLink>
-                        <NavLink className={({ isActive }) => (isActive ? 'activeSub' : 'inactiveSub')} to="/Contact" >CONTACT</NavLink>
-                        <NavLink className={({ isActive }) => (isActive ? 'resumeActiveSub' : 'resumeInactiveSub')} to="/Resume" >RESUME</NavLink>
-                </div>         
+                         
             </div>
+
+            <div className={`${isOpen ? 'showSubNav' : 'hideSubNav'}`}>
+                        <NavLink className={({ isActive }) => (isActive ? 'activeSub' : 'inactiveSub')} to="/Portfolio" onClick={handleSubClick}>PORTFOLIO</NavLink>
+                        <NavLink className={({ isActive }) => (isActive ? 'activeSub' : 'inactiveSub')} to="/About" onClick={handleSubClick}>ABOUT</NavLink>
+                        <NavLink className={({ isActive }) => (isActive ? 'activeSub' : 'inactiveSub')} to="/Contact" onClick={handleSubClick}>CONTACT</NavLink>
+                        <NavLink className={({ isActive }) => (isActive ? 'resumeActiveSub' : 'resumeInactiveSub')} to="/Resume" onClick={handleSubClick}>RESUME</NavLink>
+                        <div className="socialsSub">
+                            <a href="https://github.com/matterwin"><i className="fa-brands fa-square-github"></i></a>
+                            <a href="https://www.linkedin.com/in/matthew-erwin-71a3971b5"><i className="fa-brands fa-linkedin"></i></a>
+                            <a href="https://www.youtube.com/@matthewerwine8333/videos"><i className="fa-brands fa-square-youtube"></i></a>
+                            <a href="https://www.instagram.com/m3ttwin/?hl=en"><i className="fa-brands fa-square-instagram"></i></a>
+                        </div>
+                </div>
             
             <div className="socials">
                 <a href="https://github.com/matterwin"><i className="fa-brands fa-square-github"></i></a>

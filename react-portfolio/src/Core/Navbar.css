@@ -73,15 +73,15 @@
     color: #3f203b;
 }
 
+.socials > *:active {
+    color: yellow;
+}
+
 .active:hover {
     color: yellow;
 }
 
 .resumeActive:hover {
-    color: yellow;
-}
-
-.socials > *:active {
     color: yellow;
 }
 
@@ -128,16 +128,38 @@
   .showSubNav {
     display: flex;
     flex-direction: column;
-    position: absolute;
+    position: fixed;
     background-color: #3f203b;
     right: 0;
     left: 0;
     text-align: left;
     padding: 16px 0;
-    margin-top: 15.5rem;
+    /* margin-top: 19rem; */
     padding-left: 20px;
     padding-right: 30px;
+    font-family: 'Days One', sans-serif;
   }
+
+.socialsSub {
+    padding-left: 8px;
+}
+
+.socialsSub > * {
+    cursor: pointer;
+    color: #fff;
+    font-size: 3rem;
+    text-align: center;
+    align-self: center;
+    padding-right: 10px;
+}
+
+.socialsSub > *:hover {
+    color: #674a63;
+}
+
+.socialsSub > *:active {
+    color: yellow;
+}
 
 @media (max-width: 1360px) {
     .menu-icon {
@@ -207,7 +229,6 @@
 .inactiveSub {
     text-decoration: none;
     color: #fff;
-    font-size: 1rem
 }
 
 .resumeActiveSub {
@@ -230,4 +251,16 @@
 
 .activeSub, .inactiveSub, .resumeActiveSub, .resumeInactiveSub {
     padding: 0.5rem;
-  }
+    font-size: 1.2rem
+}
+
+@media (max-width: 320px) { 
+
+    .name {
+        font-size: 1.6rem;
+    }
+
+    .activeSub, .inactiveSub, .resumeActiveSub, .resumeInactiveSub {
+        font-size: 1rem
+    }
+}

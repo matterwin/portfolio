@@ -59,8 +59,8 @@
 .tiger {
     width: 75px;
     padding: 0;
-    margin-right: 0px;
-
+    margin-right: -20px;
+    margin-left: -20px;
 }
 
 .slide{
@@ -113,8 +113,13 @@
     
 }
 
-/* @media (max-width: 660px) {
-    .more-space {
-        padding-top: 90px;
+@media (max-width: 320px) {
+    .title-name{
+        font-size: 270%;
     }
-} */
+
+    .title-me {
+        font-size: 1.3rem;
+        font-size: 90%;
+    }
+}

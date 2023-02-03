@@ -180,7 +180,7 @@ function Contact() {
                         </div>                
                     </form>
             </div>
-            <div className="added-space"></div>
+            {/* <div className="added-space"></div> */}
         </div>
     )
 }
