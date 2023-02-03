@@ -6,7 +6,7 @@ import tiger from "../pictures/tiger.png"
 
 function Home() {
     return (
-        <div className="fornav">
+        <div className="fornav-home">
             <div className="pic-container"> 
                 <div >
                     <img className="profile-pic" alt="Matthew Erwin" src={selfie}></img>
